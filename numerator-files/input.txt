@@ -1,0 +1,4 @@
+Hello world
+This is C++
+fstream is useful
+i hate C++
