@@ -1,0 +1,5 @@
+- Aici sunt toate problemele rezolvate de mine in cpp
+- Folosind IDE: CLion
+- C++ version C20
+- compilator MinGW G++ && CMake (CMake config e in root)
+- structura proectelor: `<name>.cpp`; `./<name>-files/*`
