@@ -8,12 +8,18 @@
 using namespace std;
 
 int main() {
-    int prc = 0, ppc = 0, pac = 0;
-    char c, top;
+    int prc = 0, ppc = 0, pac = 0, n = 0;
+    char c;
     stack<char> st;
     string ln;
     ifstream in("expresii.in");
     ofstream out("expresii.out");
+    if (in >> n) {
+        getline(in, ln);
+    } else {
+        in.clear();
+        in.seekg(0);
+    }
     while (getline(in, ln)) {
         bool valid = true;
         istringstream line(ln);
@@ -21,22 +27,22 @@ int main() {
             switch (c) {
                 case '{': case '[': case '(':
                     st.push(c); break;
-                case '}':   // curly braces
+                case '}':
                     if(st.empty() || st.top() != '{') { valid = false; break; }
                     st.pop();
-                    pac++;   // {} counter
+                    pac++;
                     break;
 
-                case ']':   // square brackets
+                case ']':
                     if(st.empty() || st.top() != '[') { valid = false; break; }
                     st.pop();
-                    ppc++;   // [] counter
+                    ppc++;
                     break;
 
-                case ')':   // round brackets
+                case ')':
                     if(st.empty() || st.top() != '(') { valid = false; break; }
                     st.pop();
-                    prc++;   // () counter
+                    prc++;
                     break;
             }
         }
@@ -52,3 +58,8 @@ int main() {
     }
     return 0;
 }
+
+/*
+ * 100% gata
+ * folderul cu in && out este olimptraining/mun-ex/expresii-files
+*/

@@ -36,3 +36,5 @@ add_executable(cadoul ./mun-ex/cadoul.cpp)
 add_executable(luni ./mun-ex/luni.cpp)
 
 add_executable(expresii ./mun-ex/expresii.cpp)
+
+add_executable(circuite ./mun-ex/circuite.cpp)
