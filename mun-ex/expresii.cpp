@@ -12,10 +12,10 @@ int main() {
     char c, top;
     stack<char> st;
     string ln;
-    bool valid = true;
     ifstream in("expresii.in");
     ofstream out("expresii.out");
     while (getline(in, ln)) {
+        bool valid = true;
         istringstream line(ln);
         while (line >> c && valid) {
             switch (c) {
@@ -40,13 +40,15 @@ int main() {
                     break;
             }
         }
-        if (!valid) {
-            st = stack<char>();
-            prc = ppc = pac = 0;
-            out << "NO" << endl;
-            continue;
+        if (!st.empty())
+            valid = false;
+        if (valid) {
+            out << "DA (" << prc << ") [" << ppc << "] {" << pac << "}" << endl;
+        } else {
+            out << "NU" << endl;
         }
-        if (st.empty()) {out << "YES " << "{" << pac << "} " << "[" << ppc << "] " << "(" << prc << ") " << endl;}
+        prc = ppc = pac = 0;
+        while (!st.empty()) st.pop();
     }
     return 0;
 }
