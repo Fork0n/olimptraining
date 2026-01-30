@@ -38,3 +38,7 @@ add_executable(luni ./mun-ex/luni.cpp)
 add_executable(expresii ./mun-ex/expresii.cpp)
 
 add_executable(circuite ./mun-ex/circuite.cpp)
+
+add_executable(energie ./mun-ex/energie.cpp)
+
+add_executable(roman ./mun-ex/roman.cpp)
