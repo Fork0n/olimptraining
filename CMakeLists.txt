@@ -42,3 +42,9 @@ add_executable(circuite ./mun-ex/circuite.cpp)
 add_executable(energie ./mun-ex/energie.cpp)
 
 add_executable(roman ./mun-ex/roman.cpp)
+
+add_executable(allp allp.cpp)
+
+add_executable(cuvintele offex/cuvinte.cpp)
+
+add_executable(piese offex/piese.cpp)
