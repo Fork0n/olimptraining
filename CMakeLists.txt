@@ -48,3 +48,5 @@ add_executable(allp allp.cpp)
 add_executable(cuvintele offex/cuvinte.cpp)
 
 add_executable(piese offex/piese.cpp)
+
+add_executable(catalogul offex/catalogul.cpp)
